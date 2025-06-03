@@ -1,2 +1,27 @@
-/* src/features/landing/components/Header.css */
-/* Styles for the header, logo, and title */
+.header-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  padding: 10px 0; 
+  position: absolute;
+  top:0;
+  box-shadow: 0 0px 3px whitesmoke;
+  background-color: #141414;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+}
+
+.logo { 
+  width: 4rem; 
+  height: 4rem;
+}
+
+h1 {
+  margin: 0; 
+  font-size: 2rem; 
+  color: white; 
+}

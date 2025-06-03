@@ -8,21 +8,19 @@ function InputForm({ repoUrl, onUrlChange, onSubmit, isLoading }) { // Example p
   // - Handle form submission and call an onSubmit prop.
   // - Disable button when isLoading is true.
   return (
-    <form className="repo-input-form" /* onSubmit={onSubmit} */ >
+    <form className="repo-input-form"  onSubmit={onSubmit} >
       <label htmlFor="repo-url-input">Enter repo link:</label>
       <input
         type="url"
         id="repo-url-input"
-        placeholder="https://github.com/owner/repo"
-        /* value={repoUrl} */
-        /* onChange={onUrlChange} */
+        placeholder="https://github.com/{owner}/{repo}"
+         value={repoUrl}
+         onChange={onUrlChange}
         required
       />
-      <button type="submit" /* disabled={isLoading} */>
-        {/* {isLoading ? "Analyzing..." : "Analyze"} */}
-        Analyze
+      <button type="submit"  disabled={isLoading} >
+        {isLoading ? "Analyzing..." : "Analyze"}
       </button>
-      <p style={{fontSize: "0.8em", opacity: 0.7}}>InputForm Component</p>
     </form>
   );
 }
