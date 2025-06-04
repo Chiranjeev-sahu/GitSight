@@ -1,9 +1,8 @@
 import React from "react";
 import "./DescriptionSection.css";
 
-function DescriptionSection({ summary }) { // Expects "summary" prop
-  // This component will:
-  // - Display the project purpose summary.
+function DescriptionSection({ summary }) { 
+  
   return (
     <section className="description-section">
       <h3>Project Purpose Summary</h3>

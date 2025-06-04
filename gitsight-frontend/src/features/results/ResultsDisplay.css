@@ -1,2 +1,8 @@
-/* src/features/results/ResultsDisplay.css */
-/* Styles for the overall layout of the results area */
+.results-display-container {
+  padding: 20px;
+}
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}

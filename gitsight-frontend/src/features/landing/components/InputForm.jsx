@@ -1,24 +1,28 @@
 import React from "react";
-import "./InputForm.css";
+import "./InputForm.css"; 
 
-function InputForm({ repoUrl, onUrlChange, onSubmit, isLoading }) { // Example props
-  // This component will:
-  // - Contain the URL input field and submit button.
-  // - Be a controlled component (value and onChange from props).
-  // - Handle form submission and call an onSubmit prop.
-  // - Disable button when isLoading is true.
+
+function InputForm({ repoUrl, onUrlChange, onSubmit, isLoading }) {
+  const internalHandleSubmit = (event) => {
+    event.preventDefault(); 
+    if (onSubmit && !isLoading) {
+        onSubmit(repoUrl); 
+    }
+  };
+
   return (
-    <form className="repo-input-form"  onSubmit={onSubmit} >
+    <form className="repo-input-form" onSubmit={internalHandleSubmit}>
       <label htmlFor="repo-url-input">Enter repo link:</label>
       <input
         type="url"
         id="repo-url-input"
         placeholder="https://github.com/{owner}/{repo}"
-         value={repoUrl}
-         onChange={onUrlChange}
+        value={repoUrl}
+        onChange={onUrlChange}
+        disabled={isLoading}
         required
       />
-      <button type="submit"  disabled={isLoading} >
+      <button type="submit" disabled={isLoading}>
         {isLoading ? "Analyzing..." : "Analyze"}
       </button>
     </form>

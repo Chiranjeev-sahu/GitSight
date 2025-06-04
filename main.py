@@ -136,7 +136,7 @@ def prepare_ai_prompt_context(raw_data: RawDataResponseType, owner: str, repo_na
     context_parts.append("Key Libraries/Tools: (List or 'N/A')")
     #for roadmap
     context_parts.append("\n## Suggested Reading Roadmap ##")
-    context_parts.append("(Suggest 2-3 key files or directories a new developer should look at first to understand the project structure and entry points. Be concise.)")
+    context_parts.append("(Suggest 2-3 key files or directories a new developer should look at first to understand the project structure and entry points. Be concise.Also separate each step with '--->' such that it looks like a roadmap)")
     
     context_parts.append("\n--- REPOSITORY INFORMATION (Context for your analysis)")
 
@@ -321,7 +321,8 @@ async def analyze_repository(request: RepoRequest):
     tree_url = f"https://api.github.com/repos/{owner}/{repo_name}/git/trees/{default_branch}?recursive=1"
     try:
         response = requests.get(tree_url, headers=HEADERS)
-        response.raise_for_status(); raw_data_responses["file_tree"] = response.json()
+        response.raise_for_status(); 
+        raw_data_responses["file_tree"] = response.json()
     except Exception as e: raw_data_responses["errors"].append(f"Err FileTree: {e}")
 
 

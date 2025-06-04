@@ -1,2 +1,70 @@
-/* src/features/landing/components/InputForm.css */
-/* Styles for the form, input field, and button */
+.repo-input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; 
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  width: 100%;
+  max-width: 550px; 
+}
+
+.input-label {
+  font-weight: 600; 
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.input-field-group {
+  display: flex;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+.url-input {
+  flex-grow: 1;
+  padding: 0.5rem 0.75rem; 
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.875rem; 
+  line-height: 1.5;
+}
+
+.url-input:focus {
+  border-color: var(--border-focus);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3); 
+}
+
+.url-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.submit-button {
+  padding: 0.5rem 1rem; 
+  border: 1px solid rgba(240, 246, 252, 0.1); 
+  background-color: var(--accent-primary);
+  color: white; 
+  font-weight: 600;
+  font-size: 0.875rem; 
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: var(--accent-primary-hover);
+}
+
+.submit-button:disabled {
+  background-color: rgba(35, 134, 54, 0.6);
+  color: rgba(255, 255, 255, 0.5);
+  border-color: transparent;
+  cursor: not-allowed;
+}

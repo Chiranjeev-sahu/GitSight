@@ -1,6 +1,6 @@
 import React from "react";
-// import TechStackDisplay from "./TechStackDisplay";
-// import LanguagesDisplay from "./LanguagesDisplay";
+import TechStackDisplay from "./TechStackDisplay";
+import LanguagesDisplay from "./LanguagesDisplay";
 import "./TechAndLanguagesSection.css";
 
 function TechAndLanguagesSection({ tech, languages }) { // Expects props
@@ -10,9 +10,8 @@ function TechAndLanguagesSection({ tech, languages }) { // Expects props
   return (
     <section className="tech-languages-section">
       <h3>Technologies & Languages Used</h3>
-      {/* <TechStackDisplay techStack={tech} /> */}
-      {/* <LanguagesDisplay languages={languages} /> */}
-      <p>TechAndLanguagesSection: Shows tech stack and languages.</p>
+      <TechStackDisplay techStack={tech} />
+      <LanguagesDisplay languages={languages} />
     </section>
   );
 }

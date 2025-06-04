@@ -1,68 +1,80 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --bg-primary: #0d1117;  /* gray.9 - Deepest background (like GitHub page bg) */
+  --bg-secondary: #161b22; /* gray.8 - For cards, input areas, slightly lighter surfaces */
+  --bg-tertiary: #21262d;  /* gray.7 - For hover states on secondary surfaces or subtle elements */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Text */
+  --text-primary: #c9d1d9;   /* gray.1 - Main text color */
+  --text-secondary: #8b949e; /* gray.3 - Subtler text, placeholders */
+  --text-link: #58a6ff;      /* blue.3 - For links */
+  --text-heading: #f0f6fc;   /* gray.0 - Slightly brighter for headings */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Borders */
+  --border-primary: #30363d; /* gray.6 - Standard borders */
+  --border-secondary: #21262d;/* gray.7 - More subtle borders or dividers */
+  --border-focus: #58a6ff;   /* blue.3 - For focused input fields */
+
+  /* Accents & Actions */
+  --accent-primary: #2ea043; /* green.4 - Primary action button, success messages */
+  --accent-primary-hover: #238636; /* green.5 - Hover for primary action */
+  --accent-secondary: #58a6ff; /* blue.3 - Secondary actions, links, highlights */
+  --accent-secondary-hover: #388bfd; /* blue.4 - Hover for secondary accent */
+  
+  /* Status Colors */
+  --color-success: #2ea043;     /* green.4 */
+  --color-error: #f85149;       /* Standard red - not from your palette, but common */
+  --color-warning: #bb8009;     /* yellow.4 - For warnings */
+  --color-info: #58a6ff;        /* blue.3 */
+
+  /* Fonts */
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* GitHub's font stack */
+  --font-monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; /* GitHub's monospace font stack */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-a:hover {
-  color: #535bf2;
+
+html {
+  font-size: 16px;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
   min-height: 100vh;
+  margin: 0;
+  
+  
+  background-image: 
+    linear-gradient(rgba(139, 148, 158, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 148, 158, 0.07) 1px, transparent 1px);
+  background-size: 100px 100px; 
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a {
+  color: var(--text-link);
+  text-decoration: none;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+a:hover {
+  text-decoration: underline;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading);
+  margin-bottom: 0.75em;
+  line-height: 1.25;
+  font-weight: 600;
 }

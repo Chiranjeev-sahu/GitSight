@@ -1,2 +1,77 @@
-/* src/features/landing/LandingPage.css */
-/* Styles for the overall layout of the landing page content */
+.landing-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 90vh;
+  padding: 20px;
+}
+
+.landing-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+}
+
+.header-logo {
+  width: 7.5rem;
+  height: 5rem;
+  margin-right: -20px;
+}
+
+.header-site-name {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.hero-content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-tagline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #c7c7c7 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.hero-tagline .highlight {
+  background: #b7deed;
+  background: linear-gradient(
+    to right,
+    #b7deed 0%,
+    #71ceef 25%,
+    #21b4e2 75%,
+    #b7deed 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing-error {
+  color: var(--color-error);
+  background-color: rgba(248, 81, 73, 0.1);
+  border: 1px solid var(--color-error);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  max-width: 550px;
+  width: 90%;
+}

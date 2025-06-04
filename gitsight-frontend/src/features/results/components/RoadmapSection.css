@@ -1,1 +1,32 @@
-/* src/features/results/components/RoadmapSection.css */
+.roadmap-section {
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.roadmap-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.roadmap-step-box {
+  background-color: #2c2c2e; 
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px; 
+  border: 1px solid #444;
+}
+
+.step-title {
+  color: #a0e9ff; 
+  display: block; 
+  margin-bottom: 8px;
+}
+.step-description {
+  line-height: 1.5;
+  margin: 0;
+}
+.roadmap-arrow {
+  text-align: center; 
+  font-size: 1.5em;
+  color: #555;
+  margin: 5px 0 10px 0;
+}
