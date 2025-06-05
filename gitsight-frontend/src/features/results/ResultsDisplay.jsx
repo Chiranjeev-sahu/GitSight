@@ -13,13 +13,7 @@ function ResultsDisplay({ results, onReset }) { // Added onReset prop
   return (
     <div className="results-display">
       <h2>Analysis for: {results?.owner}/{results?.repository_name}</h2>
-      {/* <p>ResultsDisplay: Shows all analysis sections (placeholder).</p> */}
-      {/* 
-        Future child components:
-        <DescriptionSection summary={results?.project_purpose_summary} />
-        <TechAndLanguagesSection tech={results?.deduced_technology_stack} languages={results?.language_stats} />
-        ... etc. ...
-      */}
+      
       <DescriptionSection summary={results?.project_purpose_summary} />
 
 

@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  max-width: 1200px;
+  min-width: 1500px;
   min-height: 90vh;
   padding: 20px;
 }
@@ -48,8 +48,8 @@
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
-  max-width: 800px;
+  margin-bottom: 6.5rem;
+  max-width: 1000px;
 }
 
 .hero-tagline .highlight {
