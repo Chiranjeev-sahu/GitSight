@@ -1,1 +1,28 @@
-/* src/features/results/components/TechStackDisplay.css */
+.tech-stack-display h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--text-heading);
+}
+
+.tech-stack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tech-stack-category {
+  background-color: var(--bg-secondary); 
+  border-radius: 8px;
+  padding: 10px; 
+  border: 1px solid var(--border-primary);
+}
+
+.tech-category-title {
+  font-weight: bold;
+  color: var(--text-heading);
+  margin-right: 5px;
+}
+
+.tech-list {
+  color: var(--text-primary);
+}

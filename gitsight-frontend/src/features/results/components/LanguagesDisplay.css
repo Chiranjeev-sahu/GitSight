@@ -1,1 +1,29 @@
-/* src/features/results/components/LanguagesDisplay.css */
+.languages-display {
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+.languages-display h4 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--text-heading);
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.languages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.language-item {
+  background-color:  var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  font-weight: 400;
+  border: 1px solid var(--border-primary);
+}

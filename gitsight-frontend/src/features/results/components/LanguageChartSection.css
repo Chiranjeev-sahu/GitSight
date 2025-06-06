@@ -1,41 +1,44 @@
-.language-chart-section {
-  margin-top: 20px;
-  padding: 15px;
-}
-
-.language-chart-section h4 {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
+@import '../../../index.css';
 
 
-.language-bar-item {
-  margin-bottom: 8px;
+.chart-container {
   display: flex;
-  align-items: center;
-  font-size: 0.9em;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.language-bar-label {
-  min-width: 150px; 
-  margin-right: 10px;
+.chart-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.bar-container {
-  flex-grow: 1;
-  background-color: #444; 
-  border-radius: 3px;
+.chart-label {
+  color: #e6edf3;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.chart-bar-background {
   height: 20px;
+  background: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
-.bar {
+.chart-bar {
   height: 100%;
-  border-radius: 3px;
-  transition: width 0.5s ease-in-out; 
-  text-align: right;
-  padding-right: 5px;
-  color: white;
-  font-size: 0.8em;
-  line-height: 20px;
+  border-radius: 10px;
+  position: relative;
+  animation: expandBar 1.5s ease-out forwards;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+@keyframes expandBar {
+  to {
+    transform: scaleX(1);
+  }
 }

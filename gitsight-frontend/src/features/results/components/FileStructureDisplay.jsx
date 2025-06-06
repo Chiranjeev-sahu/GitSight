@@ -1,9 +1,7 @@
 import React from "react";
-// import FileCategoryBox from "../../../components/FileCategoryBox/FileCategoryBox"; // If global
 import "./FileStructureDisplay.css";
 
-function FileStructureDisplay({ fileTreeString }) { // Example prop
-  
+function FileStructureDisplay({ fileTreeString }) { 
   return (
     <section className="file-categorization-section">
       <h3>File Structure</h3>

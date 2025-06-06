@@ -1,9 +1,7 @@
-// src/features/results/components/TechStackDisplay.jsx
 import React from 'react';
-import './TechStackDisplay.css'; // Create this file
+import './TechStackDisplay.css';
 
 function TechStackDisplay({ techStack }) {
-
   if (!techStack || Object.keys(techStack).length === 0) {
     return (
       <div className="tech-stack-display">
@@ -13,13 +11,12 @@ function TechStackDisplay({ techStack }) {
     );
   }
 
-  // Filter out keys we don't want to display directly as categories
   const displayableCategories = Object.entries(techStack).filter(
-    ([key, value]) => key !== 'raw_text_block' && key !== 'parsed_error' && key !== 'raw_text' // Add any other keys to exclude
+    ([key, value]) => key !== 'raw_text_block' && key !== 'parsed_error' && key !== 'raw_text'
   );
 
   if (displayableCategories.length === 0) {
-     return (
+    return (
       <div className="tech-stack-display">
         <h4>Technology Stack:</h4>
         <p>No specific technology categories found to display.</p>
@@ -28,16 +25,18 @@ function TechStackDisplay({ techStack }) {
   }
 
   return (
-    <div className="tech-stack-display card-style"> {/* Optional: common card styling */}
+    <div className="tech-stack-display">
       <h4>Technology Stack</h4>
-      <ul className="tech-stack-list">
+      <div className="tech-stack-container">
         {displayableCategories.map(([category, technologies]) => (
-          <li key={category} className="tech-stack-item">
-            <strong className="tech-category-title">{category}:</strong> 
-            <span className="tech-list"> {typeof technologies === 'string' ? technologies : JSON.stringify(technologies)}</span>
-          </li>
+          <div key={category} className="tech-stack-category">
+            <strong className="tech-category-title">{category}:</strong>
+            <span className="tech-list">
+              {typeof technologies === 'string' ? technologies : technologies.join(', ')}
+            </span>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
