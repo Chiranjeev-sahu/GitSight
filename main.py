@@ -13,6 +13,7 @@ import google.generativeai as genai
 load_dotenv()
 app = FastAPI()
 origins = [
+    "https://gitsightv1.netlify.app",
     "http://localhost:5173",
     "http://localhost:3000", 
 ]
