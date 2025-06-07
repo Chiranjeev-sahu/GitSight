@@ -1,25 +1,32 @@
 .loading-overlay-from-component {
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(14, 14, 14, 0.082);
+  background: rgba(14, 14, 14, 0.363);
   overflow: hidden;
-  z-index: 9999; 
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateY(100%); 
+  transition: transform 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  opacity: 0; 
 }
 
+.loading-overlay-from-component.loading-overlay-enter {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 .centered-content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 3em;
-    font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .text-container {
@@ -31,7 +38,7 @@
   position: relative;
   display: inline-block;
   min-width: 6em;
-  text-align: center; 
+  text-align: center;
 }
 
 .text {
@@ -46,7 +53,7 @@
 
 .text.active {
   opacity: 1;
-  position: relative; 
+  position: relative;
 }
 
 .jumping-dots {
@@ -73,7 +80,8 @@
 }
 
 @keyframes jump {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -95,29 +103,27 @@
 .shooting-star::before {
   content: '';
   position: absolute;
-  top: 100%; 
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 1px; 
+  width: 1px;
   height: 350px;
-  background: linear-gradient(to bottom,
-    rgba(255, 255, 255, 0.8) 0%, 
-    rgba(255, 255, 255, 0) 100%); 
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 @keyframes shootVerticalOnly {
   0% {
-    transform: translateY(100vh); 
+    transform: translateY(100vh);
     opacity: 0;
   }
   20% {
     opacity: 1;
   }
-  80% { 
+  80% {
     opacity: 1;
   }
   100% {
-    transform: translateY(-200px); 
+    transform: translateY(-200px);
     opacity: 0;
   }
 }

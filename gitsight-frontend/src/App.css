@@ -1,13 +1,7 @@
-/* src/index.css (or src/App.css if App.css is your most global stylesheet) */
 html {
   box-sizing: border-box;
 }
 
 *, *::before, *::after {
-  box-sizing: inherit; /* Make all elements inherit from html */
-}
-
-/* Then your debug outline (or border, if you insist, but outline is better) */
-* {
-  /* outline: 1px solid limegreen !important; */
+  box-sizing: inherit;
 }

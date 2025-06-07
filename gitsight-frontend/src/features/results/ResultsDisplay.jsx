@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './ResultsDisplay.css';
 import DescriptionSection from './components/DescriptionSection';
 import TechStackDisplay from "./components/TechStackDisplay";
@@ -8,12 +8,26 @@ import FileStructureDisplay from './components/FileStructureDisplay';
 import RoadmmapSection from './components/RoadmapSection';
 
 function ResultsDisplay({ results, onReset }) {
+  const [isMounted, setIsMounted] = useState(false);
+  const resultsRef = useRef(null);
+
+  useEffect(() => {
+    const mountTimeout = setTimeout(() => {
+      setIsMounted(true);
+      if (resultsRef.current) {
+        resultsRef.current.classList.add('results-display-enter');
+      }
+    }, 50);
+
+    return () => clearTimeout(mountTimeout);
+  }, []);
+
   if (!results) {
     return <p>Loading results or no data to display...</p>;
   }
 
   return (
-    <>
+    <div ref={resultsRef} className={`results-display-container ${isMounted ? 'results-display-enter' : ''}`}>
       <h2>Analysis for: {results?.owner}/{results?.repository_name}</h2>
 
       <div className="parent">
@@ -56,7 +70,7 @@ function ResultsDisplay({ results, onReset }) {
       <button onClick={onReset} className="reset-button">
         Analyze Another Repository
       </button>
-    </>
+    </div>
   );
 }
 

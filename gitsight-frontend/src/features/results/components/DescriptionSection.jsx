@@ -1,4 +1,3 @@
-import React from "react";
 import "./DescriptionSection.css";
 
 function DescriptionSection({ summary }) { 

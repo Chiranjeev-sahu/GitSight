@@ -1,27 +1,48 @@
 .header-class {
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
   width: 100%; 
   padding: 10px 0; 
   position: absolute;
+  max-height: 6rem;
   top:0;
-  box-shadow: 0 0px 3px whitesmoke;
-  background-color: #141414;
+  box-shadow: 0 0px 13px 2px rgb(73, 71, 71);
+  background: #020024;
+background: linear-gradient(180deg,#1a2331 0%, rgba(9, 12, 20, 0.89) 35%, rgba(32, 32, 32, 0.87) 100%);
 }
 
 .site-header {
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+.left{
+  display: flex;
+  flex-direction:row ;
+  align-items: center;
+}
+
+.twitter-logo{
+  margin-top: 0.3rem;
 }
 
 .logo { 
-  width: 4rem; 
+  width: 6rem; 
   height: 4rem;
 }
 
+.right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width:150px;
+}
 h1 {
-  margin: 0; 
-  font-size: 2rem; 
+  margin: 2rem 1rem;  
+  font-size: 2.5rem; 
   color: white; 
 }

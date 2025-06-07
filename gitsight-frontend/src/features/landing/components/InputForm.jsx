@@ -1,4 +1,3 @@
-import React from "react";
 import "./InputForm.css";
 
 function InputForm({ repoUrl, onUrlChange, onSubmit, isLoading }) {
@@ -21,7 +20,7 @@ function InputForm({ repoUrl, onUrlChange, onSubmit, isLoading }) {
           onChange={onUrlChange}
           disabled={isLoading}
           required
-          className="repo-url-input"  // Added a CSS class to the input
+          className="repo-url-input"  
         />
         <button type="submit" disabled={isLoading}>
           Analyze

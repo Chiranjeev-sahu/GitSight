@@ -1,4 +1,3 @@
-import React from 'react';
 import './LanguageChartSection.css';
 
 function assign_language_colors(language_stats) {
