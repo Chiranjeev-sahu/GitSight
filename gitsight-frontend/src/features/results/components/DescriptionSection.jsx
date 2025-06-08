@@ -3,10 +3,12 @@ import "./DescriptionSection.css";
 function DescriptionSection({ summary }) { 
   
   return (
-    <section className="description-section">
+    <>
       <h3>Project Purpose Summary</h3>
+    <section className="description-section">
       <p>{summary || "Summary not available."}</p>
     </section>
+    </>
   );
 }
 
