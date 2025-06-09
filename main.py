@@ -129,7 +129,7 @@ def prepare_ai_prompt_context(raw_data: RawDataResponseType, owner: str, repo_na
     context_parts.append(f"Analyze the following GitHub repository data for '{owner}/{repo_name}'.")
     context_parts.append("Please provide your analysis in the following format, using these exact headings:")
     context_parts.append("## Project Purpose Summary ##")
-    context_parts.append("(Your summary here)")
+    context_parts.append("(Your summary here (must be 100 words or more but not less))")
     context_parts.append("\n## Deduced Technology Stack ##")
     context_parts.append("Frontend: (List technologies or 'N/A')")
     context_parts.append("Backend: (List technologies or 'N/A')")
