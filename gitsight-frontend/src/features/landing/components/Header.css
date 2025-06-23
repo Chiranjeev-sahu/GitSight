@@ -9,7 +9,7 @@
   top:0;
   box-shadow: 0 0px 13px 2px rgb(73, 71, 71);
   background: #020024;
-background: linear-gradient(180deg,#1a2331 0%, rgba(9, 12, 20, 0.89) 35%, rgba(32, 32, 32, 0.87) 100%);
+background: linear-gradient(0deg,#1a2331 0%, rgba(17, 23, 39, 0.329) 65%, rgba(32, 32, 32, 0.87) 100%);
 }
 
 .site-header {

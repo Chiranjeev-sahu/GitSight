@@ -1,12 +1,12 @@
 .repo-input-form {
   background: #0d1117;
-  border: 1px solid #484849;
-  border-radius: 12px;
+  border: 1px solid #bababd85;
+  border-radius: 29px;
   padding: 1rem;
   margin: 1rem;
   width: 100%;
   max-width: 800px;
-  box-shadow: 0 0px 19px 1px;
+  box-shadow: 0 3px 19px 0.3px rgba(255, 255, 255, 0.473);
 }
 
 label {

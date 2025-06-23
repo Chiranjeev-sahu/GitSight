@@ -13,8 +13,8 @@ const LoadingOverlay = () => {
     return () => clearTimeout(mountTimeout);
   }, []);
 
-  const [currentText, setCurrentText] = useState('fetching');
-  const [textsToCycle] = useState(['fetching', 'analyzing', 'summarizing']);
+  const [currentText, setCurrentText] = useState('Fetching');
+  const [textsToCycle] = useState(['Fetching','Parsing', 'Analyzing', 'Summarizing', 'Generating', 'Finalizing']);
   const [textIndex, setTextIndex] = useState(0);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const LoadingOverlay = () => {
         }
         return prevIndex; // Stay at the last index
       });
-    }, 2000);
+    }, 3000);
     return () => clearInterval(intervalId);
   }, [textsToCycle.length]); // Add textsToCycle.length as dependency
 
